@@ -1,0 +1,39 @@
+version: 2023011437d66589d9334b7893c34b7c6a94b5a7
+downloadprefix: https://raw.githubusercontent.com/EverQuestParty/client/main/rof/
+downloads:
+- name: Resources/loadscreen.jpg
+  md5: 8593d660b8daa1834f9970535976fb41
+  date: "20230114"
+  size: 290325
+- name: chess.eqg
+  md5: fca926576587d39234b08a31c4737e48
+  date: "20230114"
+  size: 51047
+- name: dbstr_us.txt
+  md5: ea420b20a634dfe09d1eec8a94d7692f
+  date: "20230114"
+  size: 6325644
+- name: dinput8.dll
+  md5: 5fe7f140006264c508e61618c0553f23
+  date: "20230114"
+  size: 1132032
+- name: eqhost.txt
+  md5: ff3b893f93cd5efc50d5f4c87b351ef9
+  date: "20230114"
+  size: 43
+- name: eqstr_us.txt
+  md5: 5dd16b6b0e823ab7cf636f439d0ba7a7
+  date: "20230114"
+  size: 425106
+- name: soldungb.eqg
+  md5: 2ddc4a48122a24da951d427fc1e6531c
+  date: "20230114"
+  size: 791949
+- name: soldungb_EnvironmentEmitters.txt
+  md5: 1a5c3724569495790187ddfaad8259cb
+  date: "20230114"
+  size: 148
+- name: village.eqg
+  md5: 559499652837964f090065f3dbcfba68
+  date: "20230114"
+  size: 1318290

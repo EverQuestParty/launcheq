@@ -1,0 +1,4 @@
+Name^EmitterDefIdx^X^Y^Z^Lifespan
+portal.beam^92^-0.0^0.0^2.4^90000000
+portal.bubble^56^-0.0^0.0^2.0^90000000
+portal.float^55^-0.0^0.0^2.2^90000000
