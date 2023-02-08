@@ -22,7 +22,6 @@ import (
 // Client wraps the entire UI
 type Client struct {
 	patcherUrl    string
-	fileListUrl   string
 	currentPath   string
 	clientVersion string
 	cfg           *config.Config
@@ -33,12 +32,11 @@ type Client struct {
 }
 
 // New creates a new client
-func New(version string, patcherUrl string, fileListUrl string) (*Client, error) {
+func New(version string, patcherUrl string) (*Client, error) {
 	var err error
 	c := &Client{
 		clientVersion: "rof",
 		patcherUrl:    patcherUrl,
-		fileListUrl:   fileListUrl,
 		version:       version,
 		httpClient: &http.Client{
 			Timeout: 3 * time.Second,
@@ -133,11 +131,11 @@ func (c *Client) selfUpdateAndPatch() error {
 
 func (c *Client) fetchFileList() error {
 	client := c.httpClient
-	url := fmt.Sprintf("%s/filelist_%s.yml", c.fileListUrl, c.clientVersion)
+	url := fmt.Sprintf("%s/filelist_%s.yml", c.patcherUrl, c.clientVersion)
 	c.logf("Downloading %s", url)
 	resp, err := client.Get(url)
 	if err != nil {
-		url := fmt.Sprintf("%s/%s/filelist_%s.yml", c.fileListUrl, c.clientVersion, c.clientVersion)
+		url := fmt.Sprintf("%s/%s/filelist_%s.yml", c.patcherUrl, c.clientVersion, c.clientVersion)
 		c.logf("Downloading legacy %s", url)
 		resp, err = client.Get(url)
 		if err != nil {

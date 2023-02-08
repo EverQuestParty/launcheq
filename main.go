@@ -11,17 +11,14 @@ import (
 )
 
 var (
-	Version     string
-	PatcherUrl  string
-	FileListUrl string
+	Version    string
+	PatcherUrl string
 )
 
 func main() {
 
 	PatcherUrl = strings.TrimSuffix(PatcherUrl, "/")
-	FileListUrl = strings.TrimSuffix(FileListUrl, "/")
-
-	c, err := client.New(Version, PatcherUrl, FileListUrl)
+	c, err := client.New(Version, PatcherUrl)
 	if err != nil {
 		fmt.Println("Failed client new:", err)
 		os.Exit(1)
