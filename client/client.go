@@ -354,6 +354,8 @@ func (c *Client) patch() error {
 	}
 	c.logf("Finished patch of %s in %0.2f seconds", generateSize(int(totalDownloaded)), time.Since(start).Seconds())
 
+	c.logf("Since files were patched, waiting 5 seconds before launching EQ...")
+	time.Sleep(5 * time.Second)
 	return nil
 }
 

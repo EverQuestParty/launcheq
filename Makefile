@@ -25,7 +25,7 @@ run: sanitize
 	cd bin && go run ../main.go
 
 bundle:
-	rsrc -manifest eqemupatcher.manifest -ico launcheq.ico -o rsrc.syso
+	rsrc -manifest launcheq.manifest -ico launcheq.ico -o rsrc.syso
 
 .PHONY: build-all
 build-all: sanitize build-prepare build-linux build-darwin build-windows	
